@@ -1,101 +1,129 @@
 * {
-	margin:	0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-	background-color:  hsl(225, 100%, 94%);
-	background-image: url("pattern-background-desktop.svg");
-	background-repeat: no-repeat;
-	font-family: 'Red Hat Display', sans-serif;
+body {
+  background-color: hsl(225, 100%, 94%);
+  background-image: url("pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  font-family: "Red Hat Display", sans-serif;
 }
-h1{
-	font-weight: 900;
-	margin: 0.625rem 0;
+h1 {
+  font-weight: 900;
+  margin: 0.625rem 0;
+}
+
+a {
+  color: hsl(245, 75%, 52%);
+}
+
+/* to centralize order card */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* makes the order card looks better on small screens */
+  padding: 0 20px;
 }
 
 .order {
-	max-width: 28.125rem;
-	margin: 1.25rem auto; 
-	background-color: #fff;
-	border-radius: 1.25rem;
+  max-width: 26.125rem;
+  margin: 1.25rem auto;
+  background-color: #fff;
+  border-radius: 1.25rem;
+  /* this will hide the image border overflow, so i deleted the border radius on img property */
+  overflow: hidden;
 }
-.order img{
-	width: 100%;
-	border-top-right-radius: 1.25rem;
-	border-top-left-radius: 1.25rem;
+.order img {
+  /* this max-width will make sure your img looks good on smaller screen */
+  max-width: 100%;
 }
 
-.top{
-	width: 67%;
-	margin: 0.625rem auto;
-	text-align: center;
+.top {
+  width: 67%;
+  margin: 30px auto;
+  text-align: center;
 }
-.top p{
-	color: hsl(224, 23%, 55%);
+.top p {
+  color: hsl(224, 23%, 55%);
+  line-height: 1.6rem;
+  margin-top: 20px;
 }
 .icon {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
-.subscription{
-	display: flex;
-	justify-content: space-between;
-	width: 80%;
-	background-color: hsl(225, 100%, 94%);
-	margin: 1.25rem auto;
-	align-items: center;
-	padding: 0.625rem;
-	border-radius: 0.625rem;
+.subscription {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  /* it needed a lighter background */
+  background-color: hsl(225, 100%, 98%);
+  margin: 1.25rem auto;
+  align-items: center;
+  padding: 0.625rem;
+  border-radius: 0.625rem;
 }
-.payment{
-	text-decoration: none;
-	background-color: hsl(245, 75%, 52%);
-	color: #fff;
-	display: block;
-	width: 80%;
-	margin: 1.25rem auto;
-	text-align: center;
-	padding: 0.625rem 0;
-	border-radius: 0.625rem;
-	box-shadow: 0 12px 12px rgba(0, 0, 0, .2);
+.subscription a {
+  margin-right: 7px;
+  font-size: 0.9rem;
 }
-.cancel{
-	display: block;
-	text-decoration: none;
-	color: hsl(224, 23%, 55%);
-	text-align: center;
-	padding-bottom: 2.5rem;
+.payment {
+  text-decoration: none;
+  background-color: hsl(245, 75%, 52%);
+  color: #fff;
+  display: block;
+  width: 80%;
+  margin: 2rem auto;
+  text-align: center;
+  padding: 0.625rem 0.2rem;
+  border-radius: 0.625rem;
+  box-shadow: 0 15px 15px 5px rgba(56, 41, 224, 0.1);
 }
-.money{
-	color: hsl(224, 23%, 55%);
+.cancel {
+  display: block;
+  text-decoration: none;
+  color: hsl(224, 23%, 55%);
+  text-align: center;
+  padding-bottom: 2.5rem;
+}
+.money {
+  color: hsl(224, 23%, 55%);
 }
 
-@media screen and (max-width: 28.125rem){
-	*{
-		box-sizing: border-box;
-	}
-	body{
-		font-size: 1rem;
-	}
-	.order{
-		width: 27.5rem;
-		}
-	.order img{
-			width: 27.5rem;
-		}
-	.top{
-			width: 80%;
-		}
-	.subscription{
-			padding: 0.625rem 0.625rem;
-			width: 80%;
-			margin: 0 auto;
-			box-sizing: border-box;
-		}
-	.subscription img{
-			width: 30%;
+/* make the icon section looks a bit cleaner */
+.icon__content {
+  margin-left: 20px;
+}
+.icon__content p:first-child {
+  font-weight: bold;
+}
 
-		}
-
+@media screen and (max-width: 28.125rem) {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-size: 1rem;
+  }
+  .order {
+    width: 27.5rem;
+  }
+  .order img {
+    width: 27.5rem;
+  }
+  .top {
+    width: 80%;
+  }
+  .subscription {
+    padding: 0.625rem 0.625rem;
+    width: 80%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  .subscription img {
+    width: 30%;
+  }
 }
